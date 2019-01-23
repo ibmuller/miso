@@ -1,6 +1,5 @@
 FROM ubuntu:16.10
-MAINTAINER Ittai Muller i.muller@vumc.nl
-Nuno Agostinho <nunodanielagostinho@gmail.com>
+MAINTAINER Ittai Muller i.muller@vumc.nl adapted from Nuno Agostinho <nunodanielagostinho@gmail.com>
 
 RUN apt-get update
 
