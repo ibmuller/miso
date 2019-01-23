@@ -29,21 +29,21 @@ WORKDIR ${SW}
 # MISO
 # Usage: miso [OPTIONS]
 # For instance, miso --run
-ADD get-pip.py .
-RUN apt-get install -y python
-RUN python get-pip.py
-RUN rm get-pip.py
 
 RUN apt update
-RUN apt-get update
-RUN pip install --upgrade python-pip
+RUN apt install -y python-pip
+RUN pip install --upgrade pip
+RUN apt install python3-numpy
+RUN apt install python3-scipy
+RUN apt install python3-matplotlib
+
 RUN pip install python3-numpy
 RUN pip install python3-scipy
 RUN pip install python3-pysam
-RUN apt install -y python3-matplotlib
 
+RUN apt install -y python3-matplotlib
 RUN apt-get install -y python-dev
 RUN apt-get install -y build-essential
-
 RUN apt-get install -y bedtools
+
 RUN pip install misopy
