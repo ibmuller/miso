@@ -34,7 +34,9 @@ RUN apt-get install -y python
 RUN python get-pip.py
 RUN rm get-pip.py
 
-RUN pip install --upgrade pip
+RUN apt update
+RUN apt-get update
+RUN pip install --upgrade python-pip
 RUN pip install python3-numpy
 RUN pip install python3-scipy
 RUN pip install python3-pysam
