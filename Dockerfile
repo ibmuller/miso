@@ -1,4 +1,4 @@
-FROM ubuntu:16.10
+FROM ubuntu:18.04
 MAINTAINER Ittai Muller i.muller@vumc.nl adapted from Nuno Agostinho <nunodanielagostinho@gmail.com>
 
 RUN apt-get update
@@ -35,9 +35,9 @@ RUN python get-pip.py
 RUN rm get-pip.py
 
 RUN pip install --upgrade pip
-RUN pip install numpy
-RUN pip install scipy
-RUN pip install pysam
+RUN pip install python-numpy
+RUN pip install python-scipy
+RUN pip install python-pysam
 
 RUN apt-get install -y python-dev
 RUN apt-get install -y build-essential
