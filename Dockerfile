@@ -35,13 +35,13 @@ RUN python get-pip.py
 RUN rm get-pip.py
 
 RUN pip install --upgrade pip
-RUN pip install python-numpy
-RUN pip install python-scipy
-RUN pip install python-pysam
+RUN pip install python3-numpy
+RUN pip install python3-scipy
+RUN pip install python3-pysam
+RUN apt install -y python3-matplotlib
 
 RUN apt-get install -y python-dev
 RUN apt-get install -y build-essential
-RUN pip install matplotlib
 
 RUN apt-get install -y bedtools
 RUN pip install misopy
