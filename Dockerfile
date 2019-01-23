@@ -33,8 +33,8 @@ WORKDIR ${SW}
 RUN apt update
 RUN apt install -y python-pip
 RUN pip install --upgrade pip
-RUN apt install python3-numpy
-RUN apt install python3-scipy
+RUN apt install -y python3-numpy
+RUN apt install -y python3-scipy
 RUN apt install -y python3-matplotlib
 RUN apt-get install -y python-dev
 RUN apt-get install -y build-essential
