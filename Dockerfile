@@ -1,6 +1,9 @@
 FROM ubuntu:18.04
 MAINTAINER Ittai Muller i.muller@vumc.nl adapted from Nuno Agostinho <nunodanielagostinho@gmail.com>
 
+ENV TZ=Europe/Amsterdam
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
 RUN apt-get update
 
 # samtools
