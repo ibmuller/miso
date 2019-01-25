@@ -22,6 +22,7 @@ WORKDIR ${SW}
 
 ENV samtools=samtools-1.9
 ADD ${samtools}.tar.bz2 .
+ADD miso_settings.txt .
 WORKDIR ${samtools}
 
 RUN ./configure
