@@ -44,4 +44,4 @@ RUN apt-get install -y build-essential
 RUN apt-get install -y bedtools
 
 RUN pip install misopy
-ADD miso_settings.txt
+ADD miso_settings.txt .
